@@ -1,0 +1,36 @@
+/* Ledger · planches V4 · "Axonométrie N&B" — desktop only (1440×900).
+   From HACKATONS/REFERENCES-CAPTURES/minimal-nb/: arrova (hairline axonometry, dashed construction),
+   dmcg (one object floating, soft shadow far below), Flyshare (extruded form on a faint grid),
+   LogoPoint (tilted glossy tiles, grey strikethrough), Nexus (white, faint grid, black button).
+   Black and white; one accent only, for the reversal. */
+:root {
+  --bg: #fafaf9;
+  --bg-2: #f1f1ef;
+  --paper: #ffffff;
+  --ink: #0e0e0e;
+  --ink-2: #3d3d3b;
+  --ink-3: #5f5f5c;
+  --ink-g: #8a8a86;            /* grey line of a title / strikethrough: large text only */
+  --accent: #c2410c;
+  --rule: rgba(14, 14, 14, 0.1);
+  --rule-2: rgba(14, 14, 14, 0.22);
+  --grid: rgba(14, 14, 14, 0.045);
+  --edge: #111;                /* hairline of the axonometric solids */
+  --face-t: #ffffff;
+  --face-f: #ecece9;
+  --face-l: #d9d9d5;
+
+  --win: #121214;
+  --win-ink: #efeeea;
+  --win-ink-2: #b0afaa;
+  --win-acc: #ff9a5c;
+
+  --f-display: "Segoe UI Variable Display", "Segoe UI", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  --f-serif: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --f-mono: "Cascadia Mono", "SF Mono", Consolas, ui-monospace, monospace;
+
+  --gut: 64px;
+  --maxw: 1312px;
+  --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+  color-scheme: light;
+}

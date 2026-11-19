@@ -4,6 +4,21 @@ All notable changes to this repository. Format loosely follows Keep a Changelog;
 `package.json`. Numbers quoted here are the ones in `docs/proofs.json`, `docs/recette.json` and
 `node .github/checks/loc-budget.mjs` at the date of the entry.
 
+## [Unreleased] — 2026-11-19
+
+### Site (`/` and `/proof.html`)
+
+- **Product site, design V5** ("Axonométrie N&B", locked 2026-11-19): `/` tells the project in four
+  chapters on one scroll (understand · the problem · the pipeline · the product), `/proof.html` carries
+  the proofs chapter above the live table of `docs/proofs.json`. Still two pages: the URL registry is
+  unchanged (three applications + index + proof page).
+- **Pure CSS 3D**, no library: the journal as an append-only stack, the pipeline as ten solids, the two
+  applications on one shelf around `packages/core`. Static HTML rendered at build time, inline style and
+  one small reveal script, `prefers-reduced-motion` honoured, no request.
+- **Figures cannot drift**: every figure names its file and the exact string it quotes;
+  `scripts/assemble-site.mjs` fails the build when one is no longer found (50 figures today).
+- Sources in `scripts/site/`; the design pack, captures and review are kept outside the repository.
+
 ## [0.1.0] — 2026-11-13
 
 First version. What the repository contains, at this date:

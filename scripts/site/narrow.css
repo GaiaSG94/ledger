@@ -1,0 +1,36 @@
+/* The design is drawn for 1440×900. Below 900 px the site only has to stay readable and never
+   overflow (e2e/layout.test.mjs measures 390×844): one column, the solids drawn at half size. */
+.chapter + .chapter .topline { display: none; }
+.apps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.app-card { display: flex; flex-direction: column; gap: 10px; padding: 28px; text-decoration: none; color: inherit; }
+.app-card b { font: 600 28px/1.1 var(--f-display); letter-spacing: -0.03em; }
+.app-card .go { margin-top: auto; font: 600 15px/1 var(--f-mono); }
+.tbl td { overflow-wrap: anywhere; }
+
+@media (max-width: 900px) {
+  body { min-width: 0; font-size: 17px; }
+  :root { --gut: 20px; }
+  .hero { height: auto; min-height: 0; padding-bottom: 48px; }
+  .split { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .split .copy { margin-top: 36px; }
+  .stage { zoom: 0.5; overflow: hidden; }
+  .display, .p1 .display, .p2 .display, .p3 .display, .p4 .display, .p5 .display { font-size: 44px !important; }
+  .h2 { font-size: 34px; }
+  .figs, .law, .promise, .fund, .steps-wrap, .guards, .third, .contest, .gl, .plist, .legend10, .apps, .fund .figs, .third .figs {
+    grid-template-columns: minmax(0, 1fr) !important; }
+  .tbl, .tbl tbody, .tbl tr, .tbl td { display: block; width: 100%; }
+  .tbl thead { display: none; }
+  .tbl td { border: 0; padding: 4px 0; }
+  .tbl tr { border-bottom: 1px solid var(--rule); padding: 14px 0; }
+  .hfoot { flex-direction: column; align-items: flex-start; }
+  .lead { white-space: normal; }
+  .vtab, .rail .meta { display: none; }
+  .rail { overflow-x: auto; }
+  .term { position: static; }
+  .foot .next { flex-direction: column; align-items: flex-start; }
+  .foot .next a { font-size: 40px; }
+  .crow { grid-template-columns: minmax(0, 1fr) 70px; }
+  .crow .p, .crow .m { display: none; }
+  .badge { font-size: 12px; letter-spacing: 0.02em; padding: 8px 10px; }
+  .sec { padding: 72px 0; }
+}
